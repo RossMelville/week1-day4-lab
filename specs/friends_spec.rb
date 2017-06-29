@@ -78,6 +78,10 @@ class TestFriends < MiniTest::Test
 
   # 2. For a given person, check if they like a particular food
 
+  def test_fav_food
+    result = fav_food(@person4, "spaghetti")
+    assert_equal(result, true)
+  end
 
   # 3. Allow a new friend to be added to a given person
 
