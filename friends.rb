@@ -19,3 +19,8 @@ end
 # def fav_food(person, food)
 #   return person[:favourites][:things_to_eat].include?("spaghetti")
 # end
+
+def add_new_friend(person, friend)
+  person[:friends].push(friend)
+  return person[:friends]
+end
