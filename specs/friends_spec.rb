@@ -72,7 +72,7 @@ class TestFriends < MiniTest::Test
   # 1. For a given person, return their favourite tv show
 
   def test_get_fav_tv
-    result = get_fav_th(@person3)
+    result = get_fav_tv(@person3)
     assert_equal("Pokemon", result)
   end
 
