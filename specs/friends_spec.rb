@@ -96,7 +96,10 @@ def test_rem_friend
 end
 
   # 5. Find the total of everyone's money
-
+def test_total_money
+  result = total_money(@people)
+  assert_equal(result, 143)
+end
 
   # 6. For two given people, allow the first person to loan a given value of money to the other
 

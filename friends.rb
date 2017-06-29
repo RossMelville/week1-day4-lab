@@ -28,3 +28,11 @@ def rem_friend(person, friend)
   person[:friends].delete(friend)
   return person[:friends]
 end
+
+def total_money(people)
+  count = 0
+  for person in people do
+    count = count += person[:monies]
+  end
+  return count
+end
