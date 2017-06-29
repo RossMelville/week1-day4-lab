@@ -10,10 +10,9 @@ def fav_food(person, food)
   for item in person[:favourites][:things_to_eat] do
       if food == item
         return true
-      else
-        return false
       end
   end
+  return false
 end
 
 # def fav_food(person, food)
@@ -22,5 +21,10 @@ end
 
 def add_new_friend(person, friend)
   person[:friends].push(friend)
+  return person[:friends]
+end
+
+def rem_friend(person, friend)
+  person[:friends].delete(friend)
   return person[:friends]
 end
