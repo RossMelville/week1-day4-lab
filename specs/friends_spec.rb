@@ -80,29 +80,33 @@ class TestFriends < MiniTest::Test
 
   def test_fav_food
     result = fav_food(@person4, "spaghetti")
-    assert_equal(result, true)
+    assert_equal(true, result)
   end
 
   # 3. Allow a new friend to be added to a given person
   def test_add_new_friend
     result = add_new_friend(@person4, "Ross")
-    assert_equal(result, ["Rick", "Jay", "Dave", "Ross"])
+    assert_equal(["Rick", "Jay", "Dave", "Ross"], result)
   end
 
   # 4. Allow a friend to be removed from a given person
-def test_rem_friend
-  result = rem_friend(@person3, "Jay")
-  assert_equal(result, ["Rick"])
-end
+  def test_rem_friend
+    result = rem_friend(@person3, "Jay")
+    assert_equal(["Rick"], result)
+  end
 
   # 5. Find the total of everyone's money
-def test_total_money
-  result = total_money(@people)
-  assert_equal(result, 143)
-end
+  def test_total_money
+    result = total_money(@people)
+    assert_equal(143, result)
+  end
 
   # 6. For two given people, allow the first person to loan a given value of money to the other
 
+  def test_loaned_money
+    result = loan_money(@person3, @person4, 10)
+    assert_equal("Transferred", result)
+  end
 
   # 7. Find the set of everyone's favourite food joined together
 

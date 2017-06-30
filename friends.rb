@@ -32,7 +32,11 @@ end
 def total_money(people)
   count = 0
   for person in people do
-    count = count += person[:monies]
+    count = count + person[:monies]
   end
   return count
 end
+
+# def loan_money(person_g, person_r, amount)
+  
+# end
